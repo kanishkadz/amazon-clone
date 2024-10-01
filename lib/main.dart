@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Amazon Clone',
-      home: Scaffold(body: Center(child: const Text('Flutter Demo Home Page'))),
+      home: Scaffold(
+        body: Center(
+          child: const Text('Flutter Demo Home Page'),
+        ),
+      ),
     );
   }
 }
