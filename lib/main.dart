@@ -22,8 +22,13 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(title: Text('Hello !'),),
-        body: Center(
-          child: const Text('Flutter Demo Home Page'),
+        body: Column(
+          children: [
+            Center(
+              child: const Text('Flutter Demo Home Page'),
+            ),
+            ElevatedButton(onPressed: () {}, child: Text('Click')),
+          ],
         ),
       ),
     );
