@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
       title: 'Amazon Clone',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        colorScheme: const ColorScheme.light(
+          primary: GlobalVariables.secondaryColor,
+        ),
         appBarTheme: AppBarTheme(
           elevation: 0,
           iconTheme: IconThemeData(color: Colors.black),
