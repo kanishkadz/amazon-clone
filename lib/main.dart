@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Amazon Clone',
       home: Scaffold(
+        appBar: AppBar(title: Text('Hello !'),),
         body: Center(
           child: const Text('Flutter Demo Home Page'),
         ),
