@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Amazon Clone',
       theme: ThemeData(
         scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
+        )
       ),
       home: Scaffold(
         appBar: AppBar(title: Text('Hello !'),),
