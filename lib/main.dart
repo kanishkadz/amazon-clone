@@ -1,3 +1,5 @@
+import 'package:amazon_clone/constants/global_variables.dart';
+import 'package:amazon_clone/router.dart';
 import 'package:amazon_clone_tutorial/common/widgets/bottom_bar.dart';
 import 'package:amazon_clone_tutorial/constants/global_variables.dart';
 import 'package:amazon_clone_tutorial/features/admin/screens/admin_screen.dart';
@@ -14,4 +16,48 @@ void main(){
       create: (context) => UserProvider(),
     ),
   ], child: const MyApp()));
+}
+
+class MyApp extends StatefulWidget{
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp>{
+  final AuthService authService = AuthService();
+
+  @override
+  void initState(){
+    super.initState();
+    authService.getUserData(Context);
+  }
+
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Amazon Clone',
+      theme : ThemeDate(
+        scaffholdBackgroundColor: GlobalVariables.backgroundColor,
+        colorScheme: const ColorScheme.light(
+          primary: GlobalVariables.secondaryColor,
+        ),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+        ),
+        useMaterial3: true,
+      ),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: Provider.of<UserProvider>(context).user.token.isNotEmpty
+        ? Provider.of<UserProvider>(context).user.type == 'user'
+          ? const BottomBar()
+          : const AdminScreen()
+        : const AuthScreen(),
+    )
+  }
 }
