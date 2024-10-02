@@ -7,8 +7,10 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
+  static const String routeName = '/auth-screen';
   @override
   Widget build(BuildContext context) {
+
     return Scaffold();
   }
 }
