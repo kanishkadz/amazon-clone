@@ -1,42 +1,40 @@
+import 'package:amazon_clone_tutorial/features/account/services/account_services.dart';
+import 'package:amazon_clone_tutorial/features/account/widgets/account_button.dart';
 import 'package:flutter/material.dart';
 
-class AccountButton extends StatelessWidget {
-  final String text;
-  final VoidCallback onTap;
-  const AccountButton({
-    Key? key,
-    required this.text,
-    required this.onTap,
-  }) : super(key: key);
+class TopButtons extends StatelessWidget {
+  const TopButtons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10),
-        height: 40,
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.white, width: 0.0),
-          borderRadius: BorderRadius.circular(50),
-          color: Colors.white,
-        ),
-        child: OutlinedButton(
-          style: ElevatedButton.styleFrom(
-            primary: Colors.black12.withOpacity(0.03),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(50),
+    return Column(
+      children: [
+        Row(
+          children: [
+            AccountButton(
+              text: 'Your Orders',
+              onTap: () {},
             ),
-          ),
-          onPressed: onTap,
-          child: Text(
-            text,
-            style: const TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
+            AccountButton(
+              text: 'Turn Seller',
+              onTap: () {},
             ),
-          ),
+          ],
         ),
-      ),
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            AccountButton(
+              text: 'Log Out',
+              onTap: () => AccountServices().logOut(context),
+            ),
+            AccountButton(
+              text: 'Your Wish List',
+              onTap: () {},
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
