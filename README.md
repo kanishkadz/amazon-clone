@@ -1,16 +1,23 @@
-# amazon_clone
+<h1>Amazon Clone Flutter App</h1>
 
-A new Flutter project.
+<p>Welcome to the <strong>Amazon Clone Flutter App</strong> developed by <strong>Kanishka Anand</strong>! This project is a feature-rich e-commerce application built using Flutter, mimicking the core functionalities of the Amazon app.</p>
 
-## Getting Started
+<h2>Features</h2>
+<ul>
+  <li><strong>User Authentication</strong>: Sign up, login, and logout using Firebase.</li>
+  <li><strong>Product Browsing</strong>: Browse through product listings with detailed descriptions.</li>
+  <li><strong>Search Functionality</strong>: Efficiently search for products using keywords.</li>
+  <li><strong>Product Reviews</strong>: View and post reviews for products.</li>
+  <li><strong>Cart Management</strong>: Add products to the cart and proceed to checkout.</li>
+  <li><strong>Order History</strong>: Track past orders and view their status.</li>
+  <li><strong>Responsive UI</strong>: A beautiful and adaptive UI for both Android and iOS devices.</li>
+</ul>
 
-This project is a starting point for a Flutter application.
+<h2>Tech Stack</h2>
+<ul>
+  <li><strong>Flutter</strong>: For building the cross-platform app.</li>
+  <li><strong>Firebase</strong>: For authentication and backend services.</li>
+  <li><strong>Provider</strong>: State management solution for Flutter.</li>
+  <li><strong>Dart</strong>: Programming language used for Flutter development.</li>
+</ul>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
